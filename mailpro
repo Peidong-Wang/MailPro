@@ -1,0 +1,10 @@
+#!/bin/bash
+
+  { echo "Command:"; \
+    echo $*; \
+    echo "Output:"; \
+    $*; \
+  } \
+  | mail -s $MAILPRO_SUBJECT \
+    $MAILPRO_ADDRESS
+
