@@ -13,7 +13,7 @@ Second, <code>cd</code> to the folder containing mailpro and assgin executabilit
 
 <code>chmod +x mailpro</code>
 
-Third, add the following variables to your bash_profile (or alternatives such as bashrc and profile (default profile on Ubuntu)).
+Third, add the following variables to your .bash_profile (or alternatives such as .bashrc and .profile (default profile on Ubuntu)) (<code>vim ~/.bash_profile</code>).
 
 <code>export PATH="_the folder containing mailpro_:$PATH"</code>
 
