@@ -1,5 +1,5 @@
 ## MailPro
-A command line tool notifying the user via email when a program finishes (the entire output of the program). Useful when running a time consuming program.
+A command line tool notifying the user via email when a program finishes (the command and output of the program). Useful when running a time consuming program.
 
 ### Install (configure, more precisely)
 
