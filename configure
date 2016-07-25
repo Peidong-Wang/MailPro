@@ -14,6 +14,7 @@
   chmod u+x mailpro
 
   # 3. add path to profile
+
   # 3-1. choose what kind of profile to add to
   if [[ ! -s "$HOME/.bash_profile" && -s "$HOME/.profile" ]] ; then
     profile_file="$HOME/.profile"
