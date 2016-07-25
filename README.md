@@ -59,6 +59,4 @@ The usage of mailpro is quite simple. Just add <code>mailpro</code> before any c
 
 ### ToDo (For Developers Only)
 
-1. Support other mailing commands such as mutt (for ones who don't have root privilege on servers like me).
-
-2. Compose an iteractive Makefile to make it easier to configure the environment.
+1. Compose an iteractive Makefile to make it easier to configure the environment.
