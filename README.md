@@ -3,23 +3,15 @@ A command line tool notifying the user via email when a program finishes (the co
 
 ### Install (configure, more precisely)
 
-First, make sure you have /usr/bin/mail and /usr/sbin/sendmail installed on your computer. If the following commands return paths, then they have been installed on your computer.
+<code>cd</code> to the folder containing mailpro and run configure.
 
-<code>which mail</code>
+<code>./configure</code>
 
-<code>which sendmail</code>
+Set the email address to which you wish to send the notification and the subject (title) of the notification according to the guidance of the message shown on command line.
 
-Second, <code>cd</code> to the folder containing mailpro and assgin executability to this shell program.
+If an error occurs saying that executability is needed for <code>./configure</code>, grant executability with the following code.
 
-<code>chmod +x mailpro</code>
-
-Third, add the following variables to your .bash_profile (or alternatives such as .bashrc and .profile (default profile on Ubuntu)) (<code>vim ~/.bash_profile</code>).
-
-<code>export PATH="_the folder containing mailpro_:$PATH"</code>
-
-<code>export MAILPRO_SUBJECT=_the subject you want to show in the email notifications_</code>
-
-<code>export MAILPRO_ADDRESS=_the email address you want to receive the notifications_</code>
+<code>chmod u+x configure</code>
 
 ###Test
 
@@ -57,6 +49,3 @@ The usage of mailpro is quite simple. Just add <code>mailpro</code> before any c
 
 <code>mailpro _your command_</code>
 
-### ToDo (For Developers Only)
-
-1. Compose an iteractive Makefile to make it easier to configure the environment.
