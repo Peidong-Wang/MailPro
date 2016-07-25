@@ -1,0 +1,49 @@
+#!/bin/bash
+
+  # 1. check for dependencies
+  if [[ -z $(command -v mail) ]]; then
+    echo "mail may not be installed."
+    exit 1
+  fi
+  if [[ -z $(command -v sendmail) ]]; then
+    echo "sendmail may not be installed."
+    exit 1
+  fi
+
+  # 2. enable executability of mailpro
+  chmod u+x mailpro
+
+  # 3. add path to profile
+  # 3-1. choose what kind of profile to add to
+  if [[ ! -s "$HOME/.bash_profile" && -s "$HOME/.profile" ]] ; then
+    profile_file="$HOME/.profile"
+  else
+    profile_file="$HOME/.bash_profile"
+  fi
+
+  # 3-2. add comment "Added for MailPro" only if current path hasn't been added
+  [[ ":$PATH:" != *":$PWD:"* ]] && echo "# Added for MailPro" >>"$profile_file"
+
+  # 3-3. add path only if current path hasn't been added
+  [[ ":$PATH:" != *":$PWD:"* ]] && echo "export PATH=$PWD:\$PATH" >>"$profile_file"
+
+  # 4. get mailpro_address and mailpro_subject and store them in ~/.mailpro_profile
+
+  # 4-1. remove ~/.mailpro_profile in case it already exists
+  rm $HOME/.mailpro_profile
+
+  # 4-2. set mailpro_address
+  printf "Please input the email address to which you want to send the notification. (Press Enter to complete.)\n"
+  read address
+  echo "export MAILPRO_ADDRESS=$address" >> $HOME/.mailpro_profile
+
+  # 4-3. set mailpro_subject
+  printf "Please specify the subject (title) of the notification. (Press Enter to complete.)\n"
+  read subject
+  echo "export MAILPRO_SUBJECT=$subject" >> $HOME/.mailpro_profile
+
+  # finish message
+  printf "Now you may enjoy MailPro! Using\nmailpro <YOUR COMMAND>\n"
+
+exit 0
+

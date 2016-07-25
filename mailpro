@@ -2,6 +2,8 @@
 
   $* 2>&1 | tee mailpro_out_"$$"
 
+  source $HOME/.mailpro_profile
+
   { echo "Command:"
     echo "$*"
     echo "Output:"
@@ -25,5 +27,5 @@
 #     done
 #   fi
 
-exit
+exit 0
 
