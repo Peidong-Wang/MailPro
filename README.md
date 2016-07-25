@@ -3,7 +3,7 @@ A command line tool notifying the user via email when a program finishes (the co
 
 ### Install (configure, more precisely)
 
-<code>cd</code> to the folder containing mailpro and run configure.
+<code>cd</code> to the folder containing mailpro. Then run <code>configure</code> as follows.
 
 <code>./configure</code>
 
