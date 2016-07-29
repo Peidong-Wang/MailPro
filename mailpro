@@ -9,8 +9,8 @@ source $HOME/.mailpro_profile
   echo "Output:"
   tail mailpro_out_"$$"
   } | \
-  mail -s $MAILPRO_SUBJECT \
-  $MAILPRO_ADDRESS
+  mail -s "$MAILPRO_SUBJECT" \
+  "$MAILPRO_ADDRESS"
 
 rm mailpro_out_"$$"
 

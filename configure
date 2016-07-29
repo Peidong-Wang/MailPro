@@ -52,7 +52,11 @@ printf "Please specify the subject (title) of the notification. (Press Enter to 
 read subject
 echo "export MAILPRO_SUBJECT=\"$subject\"" >> $HOME/.mailpro_profile
 
-# finish message
+# 5. source $profile_file to enable mailpro
+
+source "$profile_file"
+
+# 6. show finish message
 
 printf "Now you may enjoy MailPro! Using\nmailpro <YOUR COMMAND>\n"
 
