@@ -1,6 +1,10 @@
 ## MailPro
 A command line tool notifying the user via email when a program finishes (the command and output of the program). Useful when running a time consuming program.
 
+### Download
+
+You may fork the source code of MailPro or simply download and extract *mailpro.tar.gz* to use MailPro. The following instructions work for both.
+
 ### Install (configure, more precisely)
 
 <code>cd</code> to the folder containing mailpro. Then run <code>configure</code> as follows.
