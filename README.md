@@ -3,7 +3,7 @@ A command line tool notifying the user via email when a program finishes (the co
 
 ### Download
 
-You may fork the source code of MailPro or simply download and extract *mailpro.tar.gz* to use MailPro. The following instructions work for both.
+You may fork the source code of MailPro or simply download and extract **mailpro.tar.gz** to use MailPro. The following instructions work for both.
 
 ### Install (configure, more precisely)
 
