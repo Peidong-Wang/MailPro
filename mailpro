@@ -1,0 +1,35 @@
+#!/bin/bash
+
+MAILPRO_LOG="mailpro_out_$(date +%Y%m%d-%H:%M:%S-%T)_PID$$"
+
+$@ 2>&1 | tee $MAILPRO_LOG
+
+source $HOME/.mailpro_profile
+
+{ echo "Command:"
+  echo "$@"
+  echo "Output:"
+  tail $MAILPRO_LOG
+  } | \
+  mail -s "$MAILPRO_SUBJECT" \
+  "$MAILPRO_ADDRESS"
+
+# comment the command in the following line to keep output log for later reference
+
+# rm $MAILPRO_LOG
+
+# Uncomment the following code for a more robust mailpro_out_PID clean function. (In case something unexpected happens while doing "rm mailpro_out_'$$'".)
+
+# if [ -f mailpro_out_* ];
+#   then
+#   for file_name in [$(ls mailpro_out_*)]:
+#   do
+#     IFS='_' read -ra ADDR <<< file_name
+#     if [! kill -0 ${ADDR[2]}];
+#       then rm file_name
+#     fi
+#   done
+# fi
+
+exit 0
+
