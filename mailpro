@@ -16,7 +16,7 @@ source $HOME/.mailpro_profile
 
 # comment the command in the following line to keep output log for later reference
 
-# rm $MAILPRO_LOG
+rm $MAILPRO_LOG
 
 # Uncomment the following code for a more robust mailpro_out_PID clean function. (In case something unexpected happens while doing "rm mailpro_out_'$$'".)
 
