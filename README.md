@@ -55,4 +55,4 @@ The usage of mailpro is quite simple. Just add <code>mailpro</code> before any c
 
 ###To Do (For Developers Only)
 
-1. Compose a script for uninstallation using commands like <code>sed</code>.
+1. Compose a script for uninstallation, using commands like <code>sed</code>.
