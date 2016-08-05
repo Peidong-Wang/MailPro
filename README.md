@@ -5,7 +5,7 @@ A command line tool notifying the user via email when a program finishes (the co
 
 You may fork the source code of MailPro or simply download and extract **mailpro.tar.gz** to use MailPro. The following instructions work for both.
 
-### Install (configure, more precisely)
+### Install (more precisely, configure)
 
 <code>cd</code> to the folder containing mailpro. Then run <code>configure</code> as follows.
 
@@ -53,3 +53,6 @@ The usage of mailpro is quite simple. Just add <code>mailpro</code> before any c
 
 <code>mailpro _your command_</code>
 
+###To Do (For Developers Only)
+
+1. Compose a script for uninstallation using commands like <code>sed</code>.
