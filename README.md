@@ -53,6 +53,16 @@ The usage of mailpro is quite simple. Just add <code>mailpro</code> before any c
 
 <code>mailpro _your command_</code>
 
+###Uninstall
+
+There are three places modified on your system while installing MailPro.
+
+1. the folder containing mailpro, README.md, LICENSE.md and configure, i.e., this folder you are currently viewing
+2. ~/.mailpro_profile
+3. the line "# Added for MailPro" and the line following it (starting with PATH) in your ~/.bash_profile or ~/.profile (While configuring, ./configure choose ~/.bash_profile or ~/.profile automatically. In most cases, it should be ~/.bash_profile.)
+
+After cleaning up the above three contents, MailPro is cleared completely on your computer.
+
 ###To Do (For Developers Only)
 
 Compose a script for uninstallation, using commands like <code>sed</code>.
